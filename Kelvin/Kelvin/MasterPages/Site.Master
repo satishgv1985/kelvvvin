@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Kelvin.Site"
+    EnableTheming="true" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Kalven Technologies</title>
+    <%--Style sheet --%>
+    <link type="text/css" rel="stylesheet" href="App_Themes/Blue/style.css" />
+    <%--end style sheet--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height: 73%;">
+        <%--header row--%>
+        <tr>
+            <td colspan="2" class="header-td" valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td rowspan="2" class="logo-td">
+                            <img src="images/kalven-logo.png" alt="Kalven Technologies" />
+                        </td>
+                        <td>
+                            <asp:LinkButton ID="lbLogout" Text="Logout" runat="server" OnClick="lbLogout_Click" style="color:#fff;"></asp:LinkButton>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:LinkButton ID="lbAdminLink" Text="Launch Admin" runat="server" OnClick="lbAdminLink_Click" style="color:#fff;"></asp:LinkButton>
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="menu-td">
+                <ul>
+                    <li><span>
+                        <asp:LinkButton ID="lbOccupationTherapy" CommandArgument="1" runat="server" Text="Occupational Therapy"
+                            OnCommand="lbTestMaster_Click"></asp:LinkButton></span></li>
+                    <li><span>
+                        <asp:LinkButton ID="LinkButton1" CommandArgument="2" runat="server" Text="Physical Therapy"
+                            OnCommand="lbTestMaster_Click"></asp:LinkButton></span></li>
+                    <li><span>
+                        <asp:LinkButton ID="LinkButton2" CommandArgument="3" runat="server" Text="Medical Imaging"
+                           OnCommand="lbTestMaster_Click"></asp:LinkButton></span></li>
+                    <li><span>
+                        <asp:LinkButton CommandArgument="4" ID="LinkButton3" runat="server" Text="Labs" OnCommand="lbTestMaster_Click"></asp:LinkButton></span></li>
+                </ul>
+            </td>
+        </tr>
+        <%--header row--%>
+        <tr>
+            <td class="left-menu-td" valign="top">
+                <div class="menu-container-div">
+                    <div class="menu-container-white-div">
+                        <%--<asp:Button ID="Button1" runat="server" SkinID="LeftMenuSelected" Text="CT" />
+                            <asp:Button ID="Button2" runat="server" SkinID="LeftMenuNormal" Text="MRI" />
+                            <asp:Button ID="Button3" runat="server" SkinID="LeftMenuNormal" Text="X-Ray" />
+                            <asp:Button ID="Button4" runat="server" SkinID="LeftMenuNormal" Text="Ultrasound" />--%>
+                        <asp:Repeater ID="innerRepeater" runat="server" OnItemCommand="innerRepeater_command">
+                            <ItemTemplate>
+                                <%--<asp:Button runat="server" ID="innerTabsContent" CommandName='<%# Eval("TestId") %>' Text='<%# Eval("TestName") %>' />--%>
+                                <asp:Button ID="innerTabsContent" runat="server" CommandName='<%# Eval("TestId") %>'
+                                    SkinID="LeftMenuNormal" Text='<%# Eval("TestName") %>' Width="100%" style="cursor:hand;"></asp:Button>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                </div>
+            </td>
+            <td class="main-content-td" valign="top">
+                <div class="main-content-div">
+                    <div class="main-content-white-div">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

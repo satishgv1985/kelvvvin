@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kelvin", "Kelvin\Kelvin.csproj", "{C5485B91-5BD0-4095-B3F3-DD0CF1A2B8B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kelvin.BO", "Kelvin.BO\Kelvin.BO.csproj", "{1747536A-7416-4BAD-AD0A-3867CD7E8162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kelvin.DAO", "Kelvin.DAO\Kelvin.DAO.csproj", "{ED0393C4-09A1-483E-B4FE-AB4D7BBD077F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kelvin.Entities", "Kelvin.Entities\Kelvin.Entities.csproj", "{8FA894A3-04DB-478A-8DED-21BC8443EB67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kelvin.Framework", "Kelvin.Framework\Kelvin.Framework.csproj", "{4A048522-3F6C-4261-B4DC-421E44B95A84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kelvin.Utilities", "Kelvin.Utilities\Kelvin.Utilities.csproj", "{AE3135BD-669F-4965-8B93-24FF0D4D8EE0}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KalvenSetup", "KalvenSetup\KalvenSetup.vdproj", "{E38C88DC-4D53-4033-9D3F-C21683781A38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5485B91-5BD0-4095-B3F3-DD0CF1A2B8B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5485B91-5BD0-4095-B3F3-DD0CF1A2B8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5485B91-5BD0-4095-B3F3-DD0CF1A2B8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5485B91-5BD0-4095-B3F3-DD0CF1A2B8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1747536A-7416-4BAD-AD0A-3867CD7E8162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1747536A-7416-4BAD-AD0A-3867CD7E8162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1747536A-7416-4BAD-AD0A-3867CD7E8162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1747536A-7416-4BAD-AD0A-3867CD7E8162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0393C4-09A1-483E-B4FE-AB4D7BBD077F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0393C4-09A1-483E-B4FE-AB4D7BBD077F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0393C4-09A1-483E-B4FE-AB4D7BBD077F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0393C4-09A1-483E-B4FE-AB4D7BBD077F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA894A3-04DB-478A-8DED-21BC8443EB67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA894A3-04DB-478A-8DED-21BC8443EB67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA894A3-04DB-478A-8DED-21BC8443EB67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA894A3-04DB-478A-8DED-21BC8443EB67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A048522-3F6C-4261-B4DC-421E44B95A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A048522-3F6C-4261-B4DC-421E44B95A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A048522-3F6C-4261-B4DC-421E44B95A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A048522-3F6C-4261-B4DC-421E44B95A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3135BD-669F-4965-8B93-24FF0D4D8EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3135BD-669F-4965-8B93-24FF0D4D8EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3135BD-669F-4965-8B93-24FF0D4D8EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3135BD-669F-4965-8B93-24FF0D4D8EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E38C88DC-4D53-4033-9D3F-C21683781A38}.Debug|Any CPU.ActiveCfg = Debug
+		{E38C88DC-4D53-4033-9D3F-C21683781A38}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

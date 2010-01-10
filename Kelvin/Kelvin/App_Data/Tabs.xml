@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tabs>
+
+  <Page URL="ASP.FacilityHome_aspx" Tab="FACILITYHOME" />
+  
+  <Page URL="ASP.Default_aspx" Tab="DIAGNOSTICS" />
+  
+  </Tabs>

@@ -1,0 +1,5 @@
+C:\Documents and Settings\admin\Desktop\subversionafter\Kelvin\Kelvin.BO\bin\Debug\Kelvin.BO.dll
+C:\Documents and Settings\admin\Desktop\subversionafter\Kelvin\Kelvin.BO\bin\Debug\Kelvin.BO.pdb
+C:\Documents and Settings\admin\Desktop\subversionafter\Kelvin\Kelvin.BO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin\Desktop\subversionafter\Kelvin\Kelvin.BO\obj\Debug\Kelvin.BO.dll
+C:\Documents and Settings\admin\Desktop\subversionafter\Kelvin\Kelvin.BO\obj\Debug\Kelvin.BO.pdb

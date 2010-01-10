@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="KalvinConnectionString">
+      <rd:DataSourceID>e248faea-474a-4e7c-9176-f4fa47234afc</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>5a828b0b-4b33-4e74-85fb-673adbe09b2a</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="kalven_logo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="KalvinDataSet_uspGetSelectedTests">
+      <Fields>
+        <Field Name="TestProcedureId">
+          <DataField>TestProcedureId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TestProcedureDescription">
+          <DataField>TestProcedureDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ICD9Code">
+          <DataField>ICD9Code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>KalvinConnectionString</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.uspGetSelectedTests</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>KalvinDataSet</rd:DataSetName>
+        <rd:TableName>uspGetSelectedTests</rd:TableName>
+        <rd:TableAdapterName>uspGetSelectedTestsTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="KalvinDataSet_GetPatientName">
+      <Fields>
+        <Field Name="PatientFullName">
+          <DataField>PatientFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DOB">
+          <DataField>DOB</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Facility">
+          <DataField>Facility</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BloodGroup">
+          <DataField>BloodGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MedicareNumber">
+          <DataField>MedicareNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ConsultingDoctor">
+          <DataField>ConsultingDoctor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>KalvinConnectionString</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.GetPatientName</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>KalvinDataSet</rd:DataSetName>
+        <rd:TableName>GetPatientName</rd:TableName>
+        <rd:TableAdapterName>GetPatientNameTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>6.375in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="txtDoctorName">
+        <Top>1.75in</Top>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ConsultingDoctor.Value, "KalvinDataSet_GetPatientName")</Value>
+      </Textbox>
+      <Textbox Name="txtConsultingDoctor">
+        <Top>1.75in</Top>
+        <Width>1.375in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.625in</Left>
+        <Height>0.25in</Height>
+        <Value>Consulting Doctor:</Value>
+      </Textbox>
+      <Textbox Name="txtMedicareNo">
+        <Top>1.75in</Top>
+        <Width>1.125in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.375in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!MedicareNumber.Value, "KalvinDataSet_GetPatientName")</Value>
+      </Textbox>
+      <Textbox Name="txtMedicareNumber">
+        <Top>1.75in</Top>
+        <Width>1.125in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>MediCare No.:</Value>
+      </Textbox>
+      <Textbox Name="txtBloodGroupText">
+        <Top>1.375in</Top>
+        <Width>0.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!BloodGroup.Value, "KalvinDataSet_GetPatientName")</Value>
+      </Textbox>
+      <Textbox Name="txtBloodGroup">
+        <Top>1.375in</Top>
+        <Width>1in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.875in</Left>
+        <Height>0.25in</Height>
+        <Value>Blood Group:</Value>
+      </Textbox>
+      <Textbox Name="txtDOBValue">
+        <Top>1.375in</Top>
+        <Width>1in</Width>
+        <Style>
+          <Format>d</Format>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!DOB.Value, "KalvinDataSet_GetPatientName")</Value>
+      </Textbox>
+      <Textbox Name="txtDOB">
+        <Top>1.375in</Top>
+        <Width>0.5in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>DOB:</Value>
+      </Textbox>
+      <Textbox Name="txtPatientName">
+        <Top>1in</Top>
+        <Width>3.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.25in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PatientFullName.Value, "KalvinDataSet_GetPatientName")</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>1in</Top>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>Patient Name:</Value>
+      </Textbox>
+      <Image Name="KalvenLogo">
+        <Sizing>AutoSize</Sizing>
+        <Top>0.25in</Top>
+        <Width>2.91667in</Width>
+        <MIMEType>image/png</MIMEType>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Left>0.125in</Left>
+        <Height>0.47917in</Height>
+        <Value>kalven_logo</Value>
+      </Image>
+      <Table Name="table1">
+        <DataSetName>KalvinDataSet_uspGetSelectedTests</DataSetName>
+        <Top>2.125in</Top>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="txtTestProcedureDescription">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!TestProcedureDescription.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="txtICD9Code">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ICD9Code.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Test Procedure Description</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>ICD9Code</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>3in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.25in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.125in</Left>
+      </Table>
+    </ReportItems>
+    <Height>2.875in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

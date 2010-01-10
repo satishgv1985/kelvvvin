@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoggedIn.master.cs" Inherits="Kelvin.MasterPages.LoggedIn" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Kalven Technologies</title>
+    <%--Style sheet --%>
+    <link type="text/css" rel="stylesheet" href="../App_Themes/Green/Green.css" />
+    <%--end style sheet--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height: 73%;">
+        <tr>
+        <td rowspan="2" class="logo-td">
+            <a href="#">
+                <img src="../App_Themes/Green/Images/logo-kalven-new.png" alt="Kalven Technologies"
+                    border="0" /></a>
+        </td>
+        <td align="right" class="utilities-td">
+            <ul class="utilities-UL">
+                <li><span>Welcome </span><span class="name">
+                    <asp:Label ID="loginWelcomeName" runat="server"></asp:Label>
+                </span></li>
+                <li>
+                    <asp:LinkButton ID="lbLogout" Text="Logout" runat="server" OnClick="lbLogout_Click"></asp:LinkButton></li>
+                <li>
+                    <asp:LinkButton ID="LinkButton5" runat="server">FAQ</asp:LinkButton></li>
+                <li class="last">
+                    <asp:LinkButton ID="LinkButton6" runat="server">Help</asp:LinkButton></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="main-navigation-td" valign="bottom">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td align="left" valign="bottom">
+                        <ul id="navigation">
+                            <li>
+                                <asp:LinkButton ID="LinkButton41" runat="server">Home</asp:LinkButton><span></span></li>
+                            <li class="active">
+                                <asp:LinkButton ID="LinkButton411" runat="server">My Clinic</asp:LinkButton><span></span></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblFacility" runat="server" Text="Facility Name: <strong>MaryLand Medcentre</strong>"
+                            CssClass="facility-name"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+        <tr class="secondary-navigation-tr">
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                <ul class="secondary-navigation-UL">
+                    <li id="liFacilityHome" runat="server">
+                        <asp:HyperLink ID="hlFacilityHome" runat="server" Text="Facility Home" NavigateUrl="~/FacilityHome.aspx"></asp:HyperLink>
+                    </li>
+                    <li id="liDiagnostics" runat="server">
+                        <asp:HyperLink ID="hlDiagnostics" runat="server" Text="Diagnostics" NavigateUrl="~/Default.aspx"></asp:HyperLink>
+                    </li>
+                    <li id="liAdminLink" runat="server">
+                        <asp:HyperLink ID="hlAdminLink" runat="server" Text="Admin" NavigateUrl="~/AdminDashBoard.aspx"></asp:HyperLink>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <%-- <tr>
+            <td colspan="2" class="header-td" valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td colspan="2">
+                            <asp:Label ID="lblFacility" Text="Facility Name:" runat="server" CssClass="facility-name"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <asp:LinkButton ID="lbAdminLink" Text="Launch Admin" runat="server" OnClick="lbAdminLink_Click"
+                                Style="color: #fff;"></asp:LinkButton>
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>--%>
+        <tr class="third-level-navigation-tr" style="display: none">
+            <td colspan="2">
+                <ul class="third-navigation-ul">
+                    <li class="active">
+                        <asp:LinkButton ID="LinkButton11" CommandArgument="5" runat="server">Diagnostics Home</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton ID="lbOccupationTherapy" CommandArgument="1" runat="server" Text="Occupational Therapy"
+                            OnCommand="lbTestMaster_Click"></asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton ID="LinkButton1" CommandArgument="2" runat="server" Text="Physical Therapy"
+                            OnCommand="lbTestMaster_Click"></asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton ID="LinkButton2" CommandArgument="3" runat="server" Text="Medical Imaging"
+                            OnCommand="lbTestMaster_Click"></asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton CommandArgument="4" ID="LinkButton3" runat="server" Text="Labs" OnCommand="lbTestMaster_Click"></asp:LinkButton></li>
+                </ul>
+            </td>
+        </tr>
+        <tr style="display: none">
+            <td class="left-menu-td" valign="top">
+                <div class="menu-container-div">
+                    <div class="menu-container-white-div">
+                        <%--<asp:Button ID="Button1" runat="server" SkinID="LeftMenuSelected" Text="CT" />
+                            <asp:Button ID="Button2" runat="server" SkinID="LeftMenuNormal" Text="MRI" />
+                            <asp:Button ID="Button3" runat="server" SkinID="LeftMenuNormal" Text="X-Ray" />
+                            <asp:Button ID="Button4" runat="server" SkinID="LeftMenuNormal" Text="Ultrasound" />--%>
+                        <asp:Repeater ID="innerRepeater" runat="server" OnItemCommand="innerRepeater_command">
+                            <ItemTemplate>
+                                <%--<asp:Button runat="server" ID="innerTabsContent" CommandName='<%# Eval("TestId") %>' Text='<%# Eval("TestName") %>' />--%>
+                                <asp:Button ID="innerTabsContent" runat="server" CommandName='<%# Eval("TestId") %>'
+                                    SkinID="LeftMenuNormal" Text='<%# Eval("TestName") %>' Width="50px" Style="cursor: hand;">
+                                </asp:Button>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                </div>
+            </td>
+            <td class="main-content-td" valign="top">
+                <div class="main-content-div">
+                    <div class="main-content-white-div">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

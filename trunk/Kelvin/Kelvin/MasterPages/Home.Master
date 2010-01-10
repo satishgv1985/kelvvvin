@@ -1,0 +1,195 @@
+﻿<%@ Master Language="c#" CodeFile="Home.master.cs" Inherits="Kelvin.Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <%--Style sheet --%>
+    <link href="../App_Themes/Blue/homepage.css" rel="stylesheet" type="text/css" />
+    <%--end style sheet--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <div class="wrapper">
+            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="first_column">
+                        &nbsp;
+                    </td>
+                    <td align="center">
+                        <table cellpadding="2" cellspacing="2">
+                            <tr>
+                                <td valign="top" align="right">
+                                    <%--<a href="#" class="add-links">Sponsored Link</a>--%>
+                                </td>
+                                <td>
+                                    <%--<img src="Images/add-top.png" alt="Add Here" />--%>
+                                </td>
+                                <td valign="top" align="left">
+                                    <%--<a href="#" class="add-links">Hide</a>--%>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="last_column">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="header-left-shadow">
+                        &nbsp;
+                    </td>
+                    <td class="header-bg">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <div class="header-left-corner">
+                                    </div>
+                                    <div class="kalven-tech-logo">
+                                        <a href="#">
+                                            <img src="Images/kalven-logo.png" alt="Kalven Tech" border="0" />
+                                        </a>
+                                    </div>
+                                    <div class="search-container">
+                                        <div class="search-panel-left">
+                                        </div>
+                                        <div class="search-panel-body">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td>
+                                                        <asp:TextBox ID="TextBox1" runat="server" CssClass="search-text" Text="Search..."></asp:TextBox>
+                                                    </td>
+                                                    <td>
+                                                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="search-combo">
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                    <td>
+                                                        <asp:Button ID="Button1" runat="server" Text="" CssClass="search-button" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        &nbsp;
+                                                    </td>
+                                                    <td align="right" valign="top" style="padding-top: 0px;">
+                                                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="Search-more-options">More Search Options...</asp:LinkButton>
+                                                    </td>
+                                                    <td>
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="search-panel-right">
+                                        </div>
+                                    </div>
+                                    <div class="sitemapDiv">
+                                        <ul>
+                                            <li>
+                                                <asp:LinkButton ID="LinkButton8" runat="server" CssClass="Search-more-options">Sitemap</asp:LinkButton></li>
+                                            <li>
+                                                <asp:LinkButton ID="LinkButton9" runat="server" CssClass="Search-more-options">Contact Us</asp:LinkButton></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="header-right-corner">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="header-right-shadow">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menu-left-shadow">
+                        &nbsp;
+                    </td>
+                    <td class="mneu-bg">
+                        <div class="menu-left-corner">
+                            &nbsp;</div>
+                        <div class="main-navigation-div">
+                            <ul class="main-nav">
+                                <li class="selected">
+                                    <asp:LinkButton ID="LinkButton2" runat="server">Home</asp:LinkButton></li>
+                                <li>
+                                    <asp:LinkButton ID="LinkButton3" runat="server">Health Care Information</asp:LinkButton></li>
+                                <li>
+                                    <asp:LinkButton ID="LinkButton4" runat="server">Symptom Checker</asp:LinkButton></li>
+                                <li>
+                                    <asp:LinkButton ID="LinkButton5" runat="server">Innovations</asp:LinkButton></li>
+                                <li>
+                                    <asp:LinkButton ID="LinkButton6" runat="server">Ask Doctor</asp:LinkButton></li>
+                                <li>
+                                    <asp:LinkButton ID="LinkButton7" runat="server">Blog</asp:LinkButton></li>
+                            </ul>
+                        </div>
+                        <div class="menu_right_corner">
+                            &nbsp;</div>
+                        <div class="register-but-div">
+                            <%--<asp:Button ID="btnRegister" runat="server" Text="" CssClass="register-button" />--%>
+                        </div>
+                        <div class="register-but-div">
+                            <asp:Button ID="btnLogin" runat="server" Text="" CssClass="login-button" 
+                                onclick="btnLogin_Click" style="cursor:hand;"/>
+                        </div>
+                    </td>
+                    <td class="menu-right-shadow">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content-left-shadow">
+                        &nbsp;
+                    </td>
+                    <td valign="top">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td class="content-right-shadow">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td class="footer-left-shadow">
+                    &nbsp;
+                </td>
+                <td class="footer-bottom-bg">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td class="footer-left-corner">
+                            </td>
+                            <td>
+                                <table width="100%">
+                                    <tr>
+                                        <td>
+                                            <asp:LinkButton ID="LinkButton10" runat="server" CssClass="footer-links">copyright 2009 &copy KalvenMedtech.com</asp:LinkButton>
+                                        </td>
+                                        <td align="right">
+                                            <asp:LinkButton ID="LinkButton11" runat="server" CssClass="footer-links">Privacy Policy</asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="footer-right-corner">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="footer-right-shadow">
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

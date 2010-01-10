@@ -1,0 +1,172 @@
+﻿html, body
+{
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:normal;
+    color:#000000;
+    background:url(../../Images/body-bg.png) repeat-x;
+}
+
+
+.header-td
+{
+    height:87px;    
+}
+
+.logo-td
+{
+    padding:26px 0 0 10px;
+}
+
+.menu-td
+{
+    padding:14px 0 0 10px;
+    height:38px;
+}
+
+.menu-td ul
+{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+
+.menu-td ul li
+{
+    margin:0;
+    padding:7px 0px;
+    float:left;
+    background:url(../../Images/tab-normal-middle.png) repeat-x top;
+    
+    
+    
+}
+
+.menu-td ul li a
+{
+    padding:7px 15px;
+    text-decoration:none;
+    color:#000000;
+    font-weight:bold;
+    background:url(../../Images/tab-normal-left.png) no-repeat left top;
+    
+}
+
+.menu-td ul li span
+{
+    width:10px;
+    height:38px;        
+    background:url(../../Images/tab-normal-right.png) no-repeat right top;
+    padding:7px 0px;
+    text-decoration:none;
+    
+}
+
+.left-menu-td
+{
+    width:16%;    
+    padding:5px;
+    height:100%;
+}
+
+.menu-container-div
+{
+    margin-top:1px;
+    border:1px solid #6D9BFC;
+    background:#FFFFFF;
+}    
+
+.menu-container-white-div
+{
+    border:3px solid #FFFFFF;
+}
+
+
+.left-menu-normal
+{
+    width:100%;
+    height:30px;
+    margin-bottom:2px;
+    padding:0 10px;
+    color:#000000;
+    font-weight:bold;    
+    border:1px solid #C4D7FF;
+    text-align:left;
+    background:url(../../Images/left-menu-normal-bg.png) repeat-x;
+}
+
+.left-menu-selected
+{
+    width:100%;
+    height:30px;
+    margin-bottom:2px;
+    padding:0 10px;
+    color:#000000;
+    font-weight:bold;    
+    border:1px solid #C4D7FF;
+    text-align:left;
+    background:#CCDCFF;
+}
+
+.main-content-td
+{
+    padding:5px;
+    height:100%;
+}
+
+.main-content-div
+{
+    margin-top:1px;
+    border:1px solid #6D9BFC;
+    background:#FFFFFF;
+    height:100%;
+}    
+
+.main-content-white-div
+{
+    border:3px solid #FFFFFF;
+    height:100%;
+}
+
+.error-message
+{
+    border:1px solid red;
+    padding:10px 5px 5px 45px;
+    color:Red;
+    background:url(../../Images/error-icon.png) no-repeat;
+}
+
+.text-box
+{
+    border:1px solid #7F9DB9;
+}
+
+.button
+{
+    border:1px solid #016AB1;
+    background:url(../../Images/button-bg.png) repeat-x;
+    color:#FFFFFF;    
+}
+
+.grd-header
+{
+    height:30px;    
+    padding:10px 5px;
+    text-align:left;
+    background:url(../../Images/grid-header-bg.png) repeat-x;
+}
+
+.grd-row
+{
+    background:#FFFFFF;
+    height:25px;    
+}
+
+.grd-alt-row
+{
+    background:#EDF3FF;
+    height:25px;    
+}
